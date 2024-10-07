@@ -34,7 +34,6 @@ Les devoirs dont le contenu est trop proche, dont l’historique Git est douteux
 ou dont le code est si stupide qu’il ne peut pas avoir été écrit par un humain,
 seront sanctionnés d’un D ou d’un E.
 
-
 ## Comment l’installer
 
 1. Forkez le dépôt.
@@ -68,7 +67,6 @@ seront sanctionnés d’un D ou d’un E.
 8. Installez les dépendances du projet.
 
    `pip install -e .`
-
 
 ## Comment l’utiliser
 
@@ -155,7 +153,6 @@ Pour quitter l’interpréteur, utilisez `exit()`.
 Quelques tests basiques sont disponibles dans le dossier `tests`.
 
 Pour lancer les tests, lancez `python -m pytest`
-
 
 ## Sujet
 
@@ -273,8 +270,11 @@ Mettez en place un outil de vérification de la qualité du code : installez,
 configurez et utilisez `ruff`. Mettez en place dans votre dépôt Git des
 méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
-
 ## Réponses et remarques
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
+
+J'ai commencé à istaller tout d'abord pytest -cov en faisant beaucoup de test dessus, pour l'instant j'avance toujours.
+Je suis à 50% dans le fichier tests\test_db.py sinon le reste est a 100% des couvertures.
+je vais refaire un commit
