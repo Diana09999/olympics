@@ -64,3 +64,8 @@ def get_individual_medals(athlete_id=None):
 def get_top_individual(top=10):
     rows = db.get_top_individual()
     assert len(rows) > 100
+
+
+def get_athletes(id=None):
+    rows = db.get_top_individual()
+    assert len(rows) > 100
