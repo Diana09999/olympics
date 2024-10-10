@@ -1,71 +1,62 @@
 from olympics import db
 
 
-def test_get_athletes(id=None):
-    rows = db.get_athletes(500)
+def test_countries():
+    rows = db.get_countries()
     assert len(rows) > 100
+    assert len(db.get_countries(limit=1)) == 1
 
 
-def test_get_countries():
-    rows = db.get_countries(100)
-    assert len(rows) == 1
-
-
-def test_get_connection():
-    rows = db.get_connections(20)
-    assert len(rows) > 10
-
-
-def test_get_disciplines(id=None):
-    rows = db.get_discipilines(6000)
-    assert len(rows) > 1
-
-
-def test_get_teams(id=None):
-    rows = db.get_teams(500)
+def test_athletes():
+    rows = db.get_athletes()
     assert len(rows) > 100
+    assert len(db.get_athletes(limit=1)) == 1
 
 
-def test_get_events(id=None):
-    rows = db.get_events(85)
-    assert len(rows) > 29
+def test_disciplines():
+    rows = db.get_disciplines()
+    assert len(rows) > 40
+    assert len(db.get_disciplines(limit=1)) == 1
 
 
-def test_get_medals(id=None):
-    rows = db.get_medals(320)
+def test_teams():
+    rows = db.get_teams()
     assert len(rows) > 100
+    assert len(db.get_teams(limit=1)) == 1
 
 
-def test_get_discipline_athletes(discipline_id):
-    rows = db.get_discipline_athletes(3)
-    assert len(rows) > 3
+def test_events():
+    rows = db.get_events()
+    assert len(rows) > 100
+    assert len(db.get_events(limit=1)) == 1
 
 
-def test_get_top_countries(top=10):
-    rows = db.get_top_countries(96)
-    assert len(rows) > 47
+def test_medals():
+    rows = db.get_medals()
+    assert len(rows) > 100
+    assert len(db.get_medals(limit=1)) == 1
 
 
-def test_get_collective_medals(team_id=None):
-    rows = db.get_collective_medals(3)
-    assert len(rows) > 2
+def test_discipline_athletes():
+    assert len(db.get_discipline_athletes(1)) >= 10
 
 
-def test_get_top_collective(top=10):
-    rows = db.get_top_collective(1000)
-    assert len(rows) > 10
+def test_top_countries():
+    assert len(db.get_top_countries()) >= 10
 
 
-def test_get_individual_medals(athlete_id=None):
-    rows = db.get_individual_medals(20)
-    assert len(rows) > 15
+def test_collective_medals():
+    assert len(db.get_collective_medals()) >= 10
 
 
-def test_get_top_individual(top=10):
-    rows = db.get_top_individual(100)
-    assert len(rows) == 100
+def test_top_collective():
+    assert len(db.get_top_collective()) >= 10
 
 
-def test_get_select_country():
-    rows = db.get_countries(70)
-    assert len(rows) == 1
+def test_individual_medals():
+    assert len(db.get_individual_medals()) >= 10
+    assert len(db.get_individual_medals(limit=1)) == 1
+
+
+def test_top_individual():
+    assert len(db.get_top_individual()) >= 10
