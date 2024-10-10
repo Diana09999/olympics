@@ -278,3 +278,4 @@ ajoutez-les à la fin de ce fichier.
 J'ai commencé à istaller tout d'abord pytest -cov en faisant beaucoup de test dessus, pour l'instant j'avance toujours.
 Je suis à 50% dans le fichier tests\test_db.py sinon le reste est a 100% des couvertures.
 je vais refaire un commit
+Du coup, j'ai fait un message de commit pour test.db.py uniquement et pas pour les 2 autres.

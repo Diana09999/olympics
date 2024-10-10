@@ -13,7 +13,7 @@ def get_connection():
     connection.row_factory = sqlite3.Row
     cursor = connection.cursor()
     cursor.execute(
-        "PRAGMA foreign_keys"
+        "PRAGMA foreign_keys = ON"
     )  # active la clé étrangère car la valeur est absente
     cursor.close()
     return connection
